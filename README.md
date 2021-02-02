@@ -1,16 +1,17 @@
 ## pwm_lib v1.3
 
-This is pwm_lib library for the Arduino DUE electronic prototyping platform. 
+개인용직역...
+Arduino Due 전자회로 프로토타이핑 플랫폼을 위한 pwm_lib 라이브러리 
 
 Copyright (C) 2015,2020 Antonio C. Domínguez Brito (<antonio.dominguez@ulpgc.es>). División de Robótica y Oceanografía Computacional (<http://www.roc.siani.es>) and Departamento de Informática y Sistemas (<http://www.dis.ulpgc.es>). Universidad de Las Palmas de Gran  Canaria (ULPGC) (<http://www.ulpgc.es>).
   
-### 0. License 
+### 0. 라이센스 
 
-The pwm_lib library is an open source project which is openly available under the GNU General Public License (GPL) license.
+pwm_lib library는 GNU General Public License (GPL)에 따른 오픈소스입니다.
 
-### 1. Introduction
+### 1. 소개
 
-This is a C++ library to abstract the use of the eight hardware PWM channels available on Arduino DUE's Atmel ATSAM3X8E microcontroller. Each channel can be used to generate a completely independent PWM signal directly on hardware. The motivation to develop this library was two fold. First, the current limitation of the Arduino standard library where it is not possible to change the PWM output period of the PWM signals generated using function *analogWrite()*. And second, to have a library for servos directly supported by the hardware, therefore, "lighter", in terms of code generated and computational load, than the Servo library available in the Arduino standard library.
+Arduino DUE Atmel ATSAM3X8E 마이크로컨트롤러의 8개 하드웨어 PWM 채널 사용을 간소화하기 위한 C++ 라이브러리입니다. 각 채널은 완전히 독립된 PWM 신호를 하드웨어상에서 생성할 수 있습니다. 이 라이브러리를 작성하게 된 계기는, 첫째: *analogWrite()* 를 통해 Arduino 표준 라이브러리에서 제공하는 PWM 제어상의 PWM 주기 변경이 불가능함에 따른 전류 제한과, 둘째: 귀찮당This is a C++ library to abstract the use of the eight hardware PWM channels available on Arduino DUE's Atmel ATSAM3X8E microcontroller. Each channel can be used to generate a completely independent PWM signal directly on hardware. The motivation to develop this library was two fold. First, the current limitation of the Arduino standard library where it is not possible to change the PWM output period of the PWM signals generated using function *analogWrite()*. And second, to have a library for servos directly supported by the hardware, therefore, "lighter", in terms of code generated and computational load, than the Servo library available in the Arduino standard library.
 
 The library provides two kind of objects associated with each PWM channel: pwm and servo objects. As those objects abstract the PWM channels available on the micro controller, using pwm_lib you can use, at most, eight independent pwm_lib objects in your application, each one with its own PWM characteristics (PWM signal period and pulse duration). In its current version, the maximum period for PWM signals you can get using pwm_lib is a period of 102.261126095238 seconds (minimum frequency of 0.009778887033462533 Hz).
 
